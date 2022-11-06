@@ -24,7 +24,7 @@ async function printCurrentUserTable() {
 }
 
 // ------ Get current user
-function auth() { // функция для получения информации о текущем пользователе
+async function auth() { // функция для получения информации о текущем пользователе
     fetch('http://localhost:8080/api/users/auth')
         .then(response => response.json())
         .then(currentUser => {
